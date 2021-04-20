@@ -1,5 +1,4 @@
 const router = require('express').Router();
-const { json } = require('sequelize/types');
 const { Product, Category, Tag, ProductTag } = require('../../models');
 
 // get all products
@@ -13,7 +12,7 @@ router.get('/', (req, res) => {
         },
         {
           model: Tag, 
-          attributes: [tag_name]
+          attributes: ['tag_name']
         }
       ]
     }
