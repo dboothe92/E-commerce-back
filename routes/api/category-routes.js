@@ -58,7 +58,7 @@ router.put('/:id', (req, res) => {
   )
   .then(catData => {
     if (!catData) {
-      res.status(404).json({message: 'Id not found'});
+      res.status(404).json({message: 'Category not found'});
       return;
     }
     res.json(catData);
@@ -77,7 +77,7 @@ router.delete('/:id', (req, res) => {
   })
   .then(catData => {
     if (!catData) {
-      res.status(404).json({message: 'Category ID not found'});
+      res.status(404).json({message: 'Category not found'});
       return;
     }
     res.json(catData);
